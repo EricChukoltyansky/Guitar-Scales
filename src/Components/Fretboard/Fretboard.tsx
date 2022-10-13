@@ -1,10 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+
+const Frtboard = styled.div``;
+const String = styled.div``;
+const Note = styled.div``;
 
 function Fretboard() {
   return (
-    <div>Fretboard</div>
-  )
+    <Frtboard>
+      <String>
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+        <Note />
+      </String>
+    </Frtboard>
+  );
 }
 
-export default Fretboard
+export default Fretboard;
