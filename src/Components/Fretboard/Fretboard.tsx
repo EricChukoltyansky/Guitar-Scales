@@ -42,7 +42,18 @@ const Note = styled.div`
     flex-grow: 0;
     flex-shrink: 0;
     border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
-    
+  }
+
+  &::before {
+    content: "C#";
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    line-height: 33px;
+    text-align: center;
+    background-color: teal;
+    z-index:2;
+    color:#eee
   }
 `;
 
