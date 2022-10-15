@@ -20,10 +20,31 @@ const String = styled.div`
     width: 100%;
     height: 10px;
     background: linear-gradient(#eee, #999);
-    box-shadow: 76px;
+    box-shadow: 10px 3px 10px #806233;
+    z-index: 1;
+    position: absolute;
+    top: 22px;
   }
 `;
-const Note = styled.div``;
+const Note = styled.div`
+  display: flex;
+  flex: 1;
+  border-right: 10px solid;
+  border-image: linear-gradient(to left, #777, #bbb, #777) 1 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:first-child {
+    background: #161717;
+    min-width: 76px;
+    border-right: 12px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
+    
+  }
+`;
 
 function Fretboard() {
   return (
