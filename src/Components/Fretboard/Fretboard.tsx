@@ -26,7 +26,9 @@ const String = styled.div`
     top: 22px;
   }
 `;
-const Note = styled.div`
+const Note = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
   display: flex;
   flex: 1;
   border-right: 10px solid;
@@ -52,8 +54,19 @@ const Note = styled.div`
     line-height: 33px;
     text-align: center;
     background-color: teal;
-    z-index:2;
-    color:#eee
+    z-index: 2;
+    color: #eee;
+  }
+
+  & .fretmark::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 150px;
+    transform: translate(0, -50%);
   }
 `;
 
@@ -64,11 +77,11 @@ function Fretboard() {
         <Note />
         <Note />
         <Note />
+        <Note className="fretmark" />
         <Note />
+        <Note className="fretmark" />
         <Note />
-        <Note />
-        <Note />
-        <Note />
+        <Note className="fretmark" />
         <Note />
         <Note />
         <Note />
