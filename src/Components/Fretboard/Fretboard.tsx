@@ -54,6 +54,7 @@ const Note = styled.div`
     background-color: teal;
     z-index: 2;
     color: #eee;
+    opacity: 0;
   }
 
   .single-fretmark {
@@ -73,8 +74,8 @@ const Note = styled.div`
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
-    top: 200px;
-    transform: translate(0, -50%);
+    top: 58px;
+    transform: translate(-140%, 50%);
   }
 
   .double-fretmark::after {
@@ -84,8 +85,8 @@ const Note = styled.div`
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
-    top: 70px;
-    transform: translate(0, -50%);
+    top: 208px;
+    transform: translate(-140%, 50%);
   }
 `;
 
