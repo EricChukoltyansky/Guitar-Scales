@@ -56,13 +56,35 @@ const Note = styled.div`
     color: #eee;
   }
 
-  .fretmark {
+  .single-fretmark {
     position: absolute;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
     top: 150px;
+    transform: translate(0, -50%);
+  }
+
+  .double-fretmark::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 200px;
+    transform: translate(0, -50%);
+  }
+
+  .double-fretmark::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 70px;
     transform: translate(0, -50%);
   }
 `;
@@ -75,23 +97,25 @@ function Fretboard() {
         <Note />
         <Note />
         <Note>
-          <div className="fretmark"></div>
+          <div className="single-fretmark"></div>
         </Note>
         <Note />
         <Note>
-          <div className="fretmark"></div>
+          <div className="single-fretmark"></div>
         </Note>
         <Note />
         <Note>
-          <div className="fretmark"></div>
+          <div className="single-fretmark"></div>
         </Note>
         <Note />
         <Note>
-          <div className="fretmark"></div>
+          <div className="single-fretmark"></div>
         </Note>
         <Note />
         <Note />
-        <Note />
+        <Note>
+          <div className="double-fretmark"></div>
+        </Note>
         <Note />
         <Note />
       </String>
