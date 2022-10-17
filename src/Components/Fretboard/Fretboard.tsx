@@ -26,9 +26,7 @@ const String = styled.div`
     top: 22px;
   }
 `;
-const Note = styled.div.attrs((props) => ({
-  className: props.className,
-}))`
+const Note = styled.div`
   display: flex;
   flex: 1;
   border-right: 10px solid;
@@ -58,8 +56,7 @@ const Note = styled.div.attrs((props) => ({
     color: #eee;
   }
 
-  & .fretmark::after {
-    content: "";
+  .fretmark {
     position: absolute;
     height: 20px;
     width: 20px;
@@ -77,13 +74,21 @@ function Fretboard() {
         <Note />
         <Note />
         <Note />
-        <Note className="fretmark" />
+        <Note>
+          <div className="fretmark"></div>
+        </Note>
         <Note />
-        <Note className="fretmark" />
+        <Note>
+          <div className="fretmark"></div>
+        </Note>
         <Note />
-        <Note className="fretmark" />
+        <Note>
+          <div className="fretmark"></div>
+        </Note>
         <Note />
-        <Note />
+        <Note>
+          <div className="fretmark"></div>
+        </Note>
         <Note />
         <Note />
         <Note />
