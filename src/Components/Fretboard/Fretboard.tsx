@@ -18,12 +18,13 @@ const String = styled.div`
   &::before {
     content: "";
     width: 100%;
-    height: 10px;
+    height: calc(var(--string-height) * 1px);
     background: linear-gradient(#eee, #999);
     box-shadow: 10px 3px 10px #806233;
     z-index: 1;
     position: absolute;
-    top: 22px;
+    /* top: 22px; */
+    top: calc(var(--string-top-position) * 1px);
   }
 `;
 const Note = styled.div`
