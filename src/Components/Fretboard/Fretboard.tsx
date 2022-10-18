@@ -6,7 +6,7 @@ const Frtboard = styled.div`
   flex-direction: column;
   background: #be975b;
   width: 100%;
-  height: 302px;
+  height: calc(var(--fretboard-height) * 1px);
   margin-top: 50px;
 `;
 const String = styled.div`
