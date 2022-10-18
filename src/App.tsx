@@ -11,9 +11,10 @@ const GlobalStyles = createGlobalStyle`
 function App({children}: {children?: React.ReactNode}) {
   return (
     <>
-      <GlobalStyles />
-      {children}
-      <Fretboard></Fretboard>
+    {/* @ts-ignore */}
+      {/* <GlobalStyles> */}
+      <Fretboard/>
+      {/* </GlobalStyles> */}
     </>
   );
 }
