@@ -1,12 +1,20 @@
-import React from 'react';
-import './App.css';
-import Fretboard from './Components/Fretboard/Fretboard';
+import "./App.css";
+import Fretboard from "./Components/Fretboard/Fretboard";
+import { createGlobalStyle } from "styled-components";
 
-function App() {
+const GlobalStyles = createGlobalStyle`
+  body {
+    --color-text: black;
+  }
+`;
+
+function App({children}: {children?: React.ReactNode}) {
   return (
-    <div className="App">
+    <>
+      <GlobalStyles />
+      {children}
       <Fretboard></Fretboard>
-    </div>
+    </>
   );
 }
 

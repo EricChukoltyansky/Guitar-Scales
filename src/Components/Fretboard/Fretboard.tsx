@@ -54,7 +54,7 @@ const Note = styled.div`
     background-color: teal;
     z-index: 2;
     color: #eee;
-    opacity: 0;
+    opacity: 0.5;
   }
 
   .single-fretmark {
