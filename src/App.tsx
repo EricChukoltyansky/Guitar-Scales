@@ -5,14 +5,13 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   body {
     --fretboard-height: 300;
-    
+
   }
 `;
 
 function App({ children }: { children?: React.ReactNode }) {
   return (
     <>
-      {/* @ts-ignore */}
       <GlobalStyles />
       {children}
       <Fretboard />
