@@ -55,7 +55,7 @@ const Note = styled.div`
     background-color: teal;
     z-index: 2;
     color: #eee;
-    opacity: 0.5;
+    opacity: 0;
   }
 
   .single-fretmark {
@@ -64,7 +64,7 @@ const Note = styled.div`
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
-    top: 150px;
+    top: calc(var(--fretboard-height) / 2 * 1px);
     transform: translate(0, -50%);
   }
 
@@ -75,7 +75,8 @@ const Note = styled.div`
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
-    top: 58px;
+    /* top: 58px; */
+    top: calc(var(--double-fretmark-position-1) * 1px);
     transform: translate(-140%, 50%);
   }
 
@@ -86,7 +87,7 @@ const Note = styled.div`
     width: 20px;
     border-radius: 50%;
     background-color: #806233;
-    top: 208px;
+    top: calc(var(--double-fretmark-position-2) * 1px);
     transform: translate(-140%, 50%);
   }
 `;
