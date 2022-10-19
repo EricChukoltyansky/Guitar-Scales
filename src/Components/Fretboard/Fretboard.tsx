@@ -77,7 +77,7 @@ const Note = styled.div`
     background-color: #806233;
     /* top: 58px; */
     top: calc(var(--double-fretmark-position-1) * 1px);
-    transform: translate(-140%, 50%);
+    transform: translate(-140%, -50%);
   }
 
   .double-fretmark::after {
@@ -88,7 +88,7 @@ const Note = styled.div`
     border-radius: 50%;
     background-color: #806233;
     top: calc(var(--double-fretmark-position-2) * 1px);
-    transform: translate(-140%, 50%);
+    transform: translate(-140%, -50%);
   }
 `;
 
