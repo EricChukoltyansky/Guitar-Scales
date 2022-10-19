@@ -173,7 +173,7 @@ function Fretboard() {
         <Note />
         <Note />
       </String>
-      <String>
+      {/* <String>
         <Note />
         <Note />
         <Note />
@@ -206,7 +206,7 @@ function Fretboard() {
         <Note />
         <Note />
         <Note />
-      </String>
+      </String> */}
     </Frtboard>
   );
 }
