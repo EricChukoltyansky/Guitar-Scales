@@ -93,120 +93,24 @@ const Note = styled.div`
 `;
 
 function Fretboard() {
+  const [frets, setFrets] = React.useState(14);
+  const [strings, setStrings] = React.useState(6);
   return (
     <Frtboard>
-      <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note>
-          <div className="single-fretmark"></div>
-        </Note>
-        <Note />
-        <Note>
-          <div className="single-fretmark"></div>
-        </Note>
-        <Note />
-        <Note>
-          <div className="single-fretmark"></div>
-        </Note>
-        <Note />
-        <Note>
-          <div className="single-fretmark"></div>
-        </Note>
-        <Note />
-        <Note />
-        <Note>
-          <div className="double-fretmark"></div>
-        </Note>
-        <Note />
-        <Note />
-      </String>
-      <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-      </String>
-      <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-      </String>
-      <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-      </String>
-      {/* <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-      </String>
-      <String>
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-      </String> */}
+      {Array.from({ length: strings }, (_, i) => (
+        <String key={i}>
+          {i === 0 &&
+            Array.from({ length: frets }, (_, i) => (
+              <Note key={i}>
+                {i === 3 && <div className="single-fretmark"></div>}
+                {i === 5 && <div className="single-fretmark"></div>}
+                {i === 7 && <div className="single-fretmark"></div>}
+                {i === 12 && <div className="double-fretmark"></div>}
+              </Note>
+            ))}
+          {i !== 0 && Array.from({ length: frets }, (_, i) => <Note></Note>)}
+        </String>
+      ))}
     </Frtboard>
   );
 }
