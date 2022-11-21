@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   body {
     --fretboard-height: 300;
-    --number-of-strings: 4;
+    --number-of-strings: ${props => props.theme.numberOfStrings};
     --string-height:10;
     --half-string-height:calc(var(--string-height) / 2);
     --string-top-position: calc(var(--fretboard-height) / var(--number-of-strings) / 2 - var(--half-string-height)) ;

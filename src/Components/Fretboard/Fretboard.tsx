@@ -1,9 +1,11 @@
 import React from "react";
 import { Frtboard, String, Note } from "./Styling";
 
+const root = document.documentElement;
+
 function Fretboard() {
   const [frets, setFrets] = React.useState(25);
-  const [strings, setStrings] = React.useState(4);
+  const [strings, setStrings] = React.useState(2);
   return (
     <Frtboard>
       {Array.from({ length: strings }, (_, i) => (

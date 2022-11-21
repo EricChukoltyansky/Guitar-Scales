@@ -45,7 +45,7 @@ const Note = styled.div`
   }
 
   &::before {
-    content: "C#";
+    content: "D";
     width: 33px;
     height: 33px;
     border-radius: 50%;
