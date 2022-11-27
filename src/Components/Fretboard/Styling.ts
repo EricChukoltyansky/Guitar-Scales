@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-const Body = styled.body`
+interface NumberOfString {
+  numberOfStrings: number;
+}
+
+const Body = styled.body<NumberOfString>`
   --fretboard-height: 300;
-  --number-of-strings: 6;
+  --number-of-strings: ${(props) => props.numberOfStrings};
   --string-height: 10;
   --half-string-height: calc(var(--string-height) / 2);
   --string-top-position: calc(

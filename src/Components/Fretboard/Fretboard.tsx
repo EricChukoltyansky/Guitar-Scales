@@ -5,7 +5,7 @@ function Fretboard() {
   const [frets, setFrets] = React.useState(25);
   const [strings, setStrings] = React.useState(6);
   return (
-    <Body>
+    <Body numberOfStrings={strings}>
     <Frtboard>
       {Array.from({ length: strings }, (_, i) => (
         <String key={i}>
