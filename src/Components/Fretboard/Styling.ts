@@ -14,8 +14,8 @@ const Body = styled.body<NumberOfString>`
       var(--half-string-height)
   );
   --number-of-frets: 22;
-  --double-fretmark-position-1: calc(var(--fretboard-height) * 0.25);
-  --double-fretmark-position-2: calc(var(--fretboard-height) * 0.75);
+  --double-fretmark-position-1: calc(var(--fretboard-height) * 0.5);
+  --double-fretmark-position-2: calc(var(--fretboard-height) * 0.5);
 `;
 
 const Frtboard = styled.div`
@@ -94,7 +94,7 @@ const Note = styled.div`
     background-color: #806233;
     /* top: 58px; */
     top: calc(var(--double-fretmark-position-1) * 1px);
-    transform: translate(-140%, -50%);
+    transform: translate(-95%, -300%);
   }
 
   .double-fretmark::after {
@@ -105,7 +105,7 @@ const Note = styled.div`
     border-radius: 50%;
     background-color: #806233;
     top: calc(var(--double-fretmark-position-2) * 1px);
-    transform: translate(-140%, -50%);
+    transform: translate(-170%, 200%);
   }
 `;
 

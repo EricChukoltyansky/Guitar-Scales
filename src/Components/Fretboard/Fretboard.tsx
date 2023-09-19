@@ -12,15 +12,15 @@ function Fretboard() {
           {i === 0 &&
             Array.from({ length: frets }, (_, i) => (
               <Note key={i}>
-                {i === 3 && <div className="single-fretmark"></div>}
-                {i === 5 && <div className="single-fretmark"></div>}
-                {i === 7 && <div className="single-fretmark"></div>}
-                {i === 12 && <div className="double-fretmark"></div>}
-                {i === 15 && <div className="single-fretmark"></div>}
+                {i === 3 && <div className="single-fretmark">3</div>}
+                {i === 5 && <div className="single-fretmark">5</div>}
+                {i === 7 && <div className="single-fretmark">7</div>}
+                {i === 12 && <div className="double-fretmark">12</div>}
+                {i === 15 && <div className="single-fretmark">15</div>}
                 {i === 17 && <div className="single-fretmark"></div>}
                 {i === 19 && <div className="single-fretmark"></div>}
                 {i === 22 && <div className="single-fretmark"></div>}
-                {i === 24 && <div className="double-fretmark"></div>}
+                {i === 24 && <div className="double-fretmark">24</div>}
               </Note>
             ))}
           {i !== 0 && Array.from({ length: frets }, (_, i) => <Note></Note>)}
